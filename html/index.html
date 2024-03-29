@@ -16,57 +16,58 @@
     <script>
         function Menu(e) {
             let list = document.querySelector('ul');
-
-            e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'),
-                list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-80px'),
-                    list.classList.remove('opacity-100'))
+            
+            e.name === 'menu' ? (e.name = "close", list.style.top = "80px", list.style.opacity = "1") :
+            (e.name = "menu", list.style.top = "0", list.style.opacity = "0")
         }
     </script>
+    
 </head> 
 
 <body>
     <header>
-        <nav class="px-16 bg-white py-6 md:flex md:items-center drop-shadow-sm">
+        <nav class="px-17 bg-white py-6 md:flex md:items-center drop-shadow-sm">
             <div class="flex justify-between items-center">
                 <span class="text-2xl cursor-pointer pr-10">
-                    <img class=" p-1 h-10 inline-block" src= "img/Logo2.png" alt="logo">
+                    <img class="p-1 h-10 inline-block" src="img/Logo.png" alt="logo">
                     HRMS
                 </span>
-                <span class="text-3xl cursor-pointer mx-2 md:hidden block">
-                    <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+                <span class="text-3xl cursor-pointer mx-2 md:hidden block" onclick="Menu(this)">
+                    <ion-icon name="menu-outline"></ion-icon>
                 </span>
             </div>
-            <div>
-                <ul
-                    class="bg-white md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-                    <li class=" mx-4 my-6 md:my-0">
-                        <a class="text-gray-500 hover:text-black duration-500" href="">
-                            Home
-                        </a>
-                    </li>
-                    <li class="mx-4 my-6 md:my-0">
-                        <a class="text-gray-500 hover:text-black duration-500" href="">
-                            Products
-                            <ion-icon class="pl-1" name="chevron-down-outline"></ion-icon>
-                        </a>
-                    </li>
-                    <li class="mx-4 my-6 md:my-0">
-                        <a class="text-gray-500 hover:text-black duration-500" href="">
-                            Resources
-                            <ion-icon class="pl-1" name="chevron-down-outline"></ion-icon>
-                        </a>
-                    </li>
-                    <li class="mx-4 my-6 md:my-0">
-                        <a class="text-gray-500 hover:text-black duration-500" href="">
-                            Pricing
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="ml-auto md:flex sm:hidden">
-                <img src="img/Dropdown.png" alt="">
-            </div>
         </nav>
+        <div>
+            <ul
+                class="bg-white md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                <li class=" mx-4 my-6 md:my-0">
+                    <a class="text-gray-500 hover:text-black duration-500" href="">
+                        Home
+                    </a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-gray-500 hover:text-black duration-500" href="">
+                        Products
+                        <ion-icon class="pl-1" name="chevron-down-outline"></ion-icon>
+                    </a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-gray-500 hover:text-black duration-500" href="">
+                        Resources
+                        <ion-icon class="pl-1" name="chevron-down-outline"></ion-icon>
+                    </a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-gray-500 hover:text-black duration-500" href="">
+                        Pricing
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="ml-auto md:flex sm:hidden">
+            <img src="img/Dropdown.png" alt="">
+        </div>
+    </nav>
     </header>
     <main>
         <section class="pt-20">
